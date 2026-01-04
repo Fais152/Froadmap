@@ -43,7 +43,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTa
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer btn-press group" onClick={() => setActiveTab('explore')}>
             <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-shadow">F</div>
-            <h1 className="font-bold text-lg tracking-tight hidden sm:block text-slate-800 dark:text-emerald-50">F<span className="text-emerald-600">Roamap</span></h1>
+            <h1 className="font-bold text-lg tracking-tight hidden sm:block text-slate-800 dark:text-emerald-50">F<span className="text-emerald-600">roadmap</span></h1>
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
@@ -92,7 +92,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTa
       <footer className="bg-white/60 dark:bg-[#020617] border-t border-slate-200 dark:border-slate-800 py-12 relative z-10">
         <div className="max-w-5xl mx-auto px-6 flex flex-col-reverse sm:flex-row justify-between items-center gap-8">
           <p className="text-sm text-slate-500 dark:text-slate-500 font-medium text-center sm:text-left">
-            © 2024 FRoamap.
+            © 2024 Froadmap.
           </p>
           <div className="flex items-center gap-4 text-slate-500 dark:text-slate-400">
              <a href="https://www.facebook.com/fais.ntaps?locale=id_ID" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all transform hover:scale-110" aria-label="Facebook">
