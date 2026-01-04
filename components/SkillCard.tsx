@@ -61,15 +61,15 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, onClick, index = 0,
     <div 
       onClick={() => onClick(skill.id)}
       style={{ animationDelay }}
-      className="group animate-fade-up relative bg-white dark:bg-[#0f172a] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover-lift 
-      hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] dark:hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)]
-      hover:border-emerald-500/30 dark:hover:border-emerald-500/30 
+      className="group animate-fade-up relative bg-white dark:bg-[#0f172a] rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover-lift 
+      shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.1)] dark:hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)]
+      hover:border-emerald-500/20 dark:hover:border-emerald-500/30 
       cursor-pointer flex flex-col h-full transition-all duration-300"
     >
       {/* Logo Header */}
       <div className={`relative h-40 w-full flex items-center justify-center overflow-hidden transition-colors duration-300 ${bgClass} group-hover:bg-slate-50 dark:group-hover:bg-[#131c31]`}>
         {/* Large Faded Watermark Icon */}
-        <div className="absolute -right-8 -bottom-8 opacity-5 transform rotate-12 scale-150 pointer-events-none">
+        <div className="absolute -right-8 -bottom-8 opacity-[0.03] dark:opacity-5 transform rotate-12 scale-150 pointer-events-none">
             <SkillLogo id={skill.id} className="w-40 h-40" colorClass="text-current" />
         </div>
 
@@ -80,7 +80,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, onClick, index = 0,
         
         {/* Category Badge */}
         <div className="absolute top-3 left-3">
-          <span className="bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 shadow-sm uppercase tracking-wider">
+          <span className="bg-white/90 dark:bg-[#0f172a]/80 backdrop-blur-md text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-100 dark:border-slate-700 shadow-sm uppercase tracking-wider">
             {skill.category}
           </span>
         </div>
@@ -94,17 +94,17 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, onClick, index = 0,
                 <div className={`w-1.5 h-1.5 rounded-full ${diffStyle.dot}`}></div>
                 {skill.difficulty}
             </div>
-            <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium bg-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded-md">
+            <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium bg-slate-50 dark:bg-slate-800/50 px-2 py-1 rounded-md">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 {skill.duration}
             </div>
         </div>
 
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors break-words">
             {skill.title}
         </h3>
 
-        <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-6 flex-1 leading-relaxed">
+        <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-6 flex-1 leading-relaxed break-words">
           {skill.purpose}
         </p>
         
